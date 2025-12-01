@@ -20,4 +20,5 @@ const contactSchema = new mongoose.Schema(
             default: Date.now 
         },
 });
+
 export default mongoose.model('Contact', contactSchema);
