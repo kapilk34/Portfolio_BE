@@ -17,6 +17,10 @@ mongoose.connect(process.env.MONGODB_URI, {
   useUnifiedTopology: true,
 });
 
+app.get('/', (req, res) => {
+  res.send('Backend deployed successfully and is running fine 🚀');
+});
+
 app.post('/api/contact', async (req, res) => {
   try {
     const { name, email, message } = req.body;
